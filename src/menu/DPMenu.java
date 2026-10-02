@@ -5,13 +5,14 @@ import java.util.Scanner;
 import algorithms.dp.BitmaskTSP;
 import algorithms.dp.IntervalDP;
 import algorithms.dp.KnapsackDP;
+import algorithms.dp.OptimalBST;
 import algorithms.editdistance.WagnerFischer;
 import algorithms.sequence.NeedlemanWunsch;
 import algorithms.sequence.SmithWaterman;
 import service.DPService;
 
 /**
- * Interactive menu for Dynamic Programming & Optimization Algorithms (Module 2).
+ * Interactive menu for Dynamic Programming & Optimization Algorithms (Module 3 - CO3).
  */
 public class DPMenu {
 
@@ -32,7 +33,7 @@ public class DPMenu {
         System.out.println();
         System.out.println("====================================================");
         System.out.println("     DYNAMIC PROGRAMMING & OPTIMIZATION MENU");
-        System.out.println("                    (Module 2)");
+        System.out.println("                    (Module 3 - CO3)");
         System.out.println("====================================================");
         System.out.println("1. 0/1 Knapsack Payload Optimization (DP Framework)");
         System.out.println("2. Wagner-Fischer Edit Distance & Fuzzy Address Match");
@@ -40,7 +41,8 @@ public class DPMenu {
         System.out.println("4. Smith-Waterman Local Sequence Alignment");
         System.out.println("5. Interval DP Hub Batch Consolidation");
         System.out.println("6. Bitmask DP Travelling Salesperson Problem (TSP)");
-        System.out.println("7. Run Full DP Algorithm Demo Suite");
+        System.out.println("7. Optimal Binary Search Tree (OBST Key Lookup Optimization)");
+        System.out.println("8. Run Full DP Algorithm Demo Suite");
         System.out.println("0. Return to Main Menu");
         System.out.println("----------------------------------------------------");
         System.out.print("Enter your choice: ");
@@ -71,6 +73,9 @@ public class DPMenu {
                     runBitmaskTSPRouting();
                     break;
                 case 7:
+                    runOptimalBSTLookup();
+                    break;
+                case 8:
                     dpService.runAllDPDemos();
                     pause();
                     break;
@@ -181,6 +186,14 @@ public class DPMenu {
         System.out.println("\n--- Bitmask DP & TSP Multi-Stop Delivery Routing ---");
         BitmaskTSP.TSPResult result = dpService.optimizeFleetDeliveryTour();
         System.out.println("\nOptimal Closed-Loop Tour:");
+        System.out.println(result);
+        pause();
+    }
+
+    private void runOptimalBSTLookup() {
+        System.out.println("\n--- Optimal Binary Search Tree (OBST) Key Lookup ---");
+        OptimalBST.OBSTResult result = dpService.optimizeShipmentKeyLookup();
+        System.out.println("\nOBST Result:");
         System.out.println(result);
         pause();
     }

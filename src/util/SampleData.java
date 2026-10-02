@@ -5,11 +5,12 @@ import java.util.List;
 
 import model.Package;
 import model.Shipment;
+import model.ShipmentDocument;
 
 /**
  * SampleData utility for pre-loading realistic test data into FleetFlow.
- * Contains sample shipments, package codes, delivery keywords, and status log streams
- * specifically curated for testing String Algorithms (M1 - CO1).
+ * Contains sample shipments, package codes, delivery keywords, status log streams,
+ * and logistics documents for Modules M1, M2, and M3 testing.
  */
 public class SampleData {
 
@@ -50,6 +51,39 @@ public class SampleData {
         packages.add(new Package("PKG-HAZMAT-4455", "Chemical Samples", 8.8, "Failed Attempt"));
         packages.add(new Package("PKG-DELUXE-9902", "Medical Equipment", 1.5, "Delivered"));
         return packages;
+    }
+
+    /**
+     * Generates sample shipment documents for Module 2 Suffix Structures testing.
+     */
+    public static List<ShipmentDocument> getSampleDocuments() {
+        List<ShipmentDocument> docs = new ArrayList<>();
+
+        docs.add(new ShipmentDocument(
+                "DOC-BOL-101",
+                "Bill of Lading - NY to Boston",
+                "Bill of Lading",
+                "Consignment Bill of Lading. Origin: 100 Port Street, New York, NY 10001. Destination: 500 Freight Way, Boston, MA 02110. Contents: High priority electronic components. Special Instructions: Handle with care, store at room temperature.",
+                "SHIP-2026-NY-101"
+        ));
+
+        docs.add(new ShipmentDocument(
+                "DOC-REC-102",
+                "Delivery Receipt - LA Distribution Hub",
+                "Delivery Receipt",
+                "Delivery Verification Receipt. Origin: 200 Harbor Drive, Los Angeles, CA 90001. Destination: 500 Freight Way, Boston, MA 02110. Recipient confirmed package received in good condition. Special Instructions: Handle with care, store at room temperature.",
+                "SHIP-2026-LA-202"
+        ));
+
+        docs.add(new ShipmentDocument(
+                "DOC-CUST-103",
+                "Customs Declaration - Chicago Central Hub",
+                "Customs Declaration",
+                "Customs Clearance Manifesto. Entry Hub: 300 Logistics Blvd, Chicago, IL 60601. Destination: 500 Freight Way, Boston, MA 02110. Declared Cargo Value: $45,000 USD. Clearance Status: Approved after inspection.",
+                "SHIP-2026-CHI-303"
+        ));
+
+        return docs;
     }
 
     /**
