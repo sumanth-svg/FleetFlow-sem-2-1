@@ -27,6 +27,7 @@ public class MainMenu {
         System.out.println("7. Delivery Planning");
         System.out.println("8. Network & Resource Management");
         System.out.println("9. View System Statistics");
+        System.out.println("10. Dynamic Programming & Optimization Module");
         System.out.println("0. Exit");
 
         System.out.println("----------------------------------------------------");
@@ -48,6 +49,9 @@ public class MainMenu {
         if (choice == 4) {
             SearchMenu searchMenu = new SearchMenu(scanner);
             searchMenu.executeMenu();
+        } else if (choice == 10) {
+            DPMenu dpMenu = new DPMenu(scanner);
+            dpMenu.executeMenu();
         }
 
         return choice;
