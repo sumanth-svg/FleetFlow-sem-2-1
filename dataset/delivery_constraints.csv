@@ -1,0 +1,7 @@
+constraint_id,category,description,clause_cnf
+CST-01,DRIVER_HOURS,"Driver 1 must rest if Driver 2 is assigned, or Vehicle 101 must take relief driver: (D1_REST v ~D2_ASSIGNED v V101_RELIEF)","1 -2 3"
+CST-02,HAZMAT_SAFETY,"Flammable cargo cannot be packed with standard cargo unless certified container is active: (~HAZMAT v CERT_CONTAINER v ~STD_CARGO)","-4 5 -6"
+CST-03,TIME_WINDOW,"Urgent package PKG-7002 must take route Lane A or Lane B before 10 AM: (LANE_A v LANE_B v RESCHEDULE)","7 8 9"
+CST-04,EXCLUSIVE_FLEET,"Electric van VEH-102 or VEH-111 must cover Manhattan zone, not Heavy Truck: (V102_ZONE v V111_ZONE v ~V101_ZONE)","10 11 -12"
+CST-05,CROSSDOCK_SYNC,"Morning Dallas freight crossdock requires Gate 1 or Gate 2 open with Inspector on site: (GATE_1 v GATE_2 v INSP_ON_SITE)","13 14 15"
+CST-06,CONFLICT_LANE,"Route Corridor Chicago-Detroit and Corridor Chicago-Pittsburgh cannot both exceed peak volume without relief depot: (~CH_DET_PEAK v ~CH_PIT_PEAK v RELIEF_DEPOT)","-16 -17 18"

@@ -1,0 +1,11 @@
+warehouse_id,name,city,state,capacity_tons,lat,lon
+WH-001,Central Hub Chicago,Chicago,IL,25000,41.8781,-87.6298
+WH-002,Atlantic Terminal Newark,Newark,NJ,18000,40.7357,-74.1724
+WH-003,Pacific Gateway Los Angeles,Los Angeles,CA,32000,34.0522,-118.2437
+WH-004,Southwest Depot Dallas,Dallas,TX,22000,32.7767,-96.7970
+WH-005,Midwest Junction Atlanta,Atlanta,GA,19500,33.7490,-84.3880
+WH-006,Northwest Center Seattle,Seattle,WA,15000,47.6062,-122.3321
+WH-007,Rocky Mountain Hub Denver,Denver,CO,14000,39.7392,-104.9903
+WH-008,Great Lakes Distribution Detroit,Detroit,MI,16500,42.3314,-83.0458
+WH-009,Sunshine Crossdock Miami,Miami,FL,17500,25.7617,-80.1918
+WH-010,Appalachian Cargo Center Pittsburgh,Pittsburgh,PA,13000,40.4406,-79.9959
